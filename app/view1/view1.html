@@ -1,0 +1,36 @@
+
+
+
+<div class="flex-container">
+<h2 ng-click="selectRegions()">{{desktop}}</h2>
+</div>
+
+<div class="flex-container">
+<h1>{{listHeader}}</h1>
+</div>
+
+<section ng-if="showRegions">
+<div class="flex-container">
+	<div ng-repeat="item in list" class="card" ng-click="selectRegion(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showCountries">
+<div class="flex-container">
+	<div ng-repeat="item in list" class="card" ng-click="selectCountry(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showCountry">
+<div class="flex-container">
+	<div ng-repeat="item in list" class="card" ng-click="selectCountry(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Location Data</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+<style type="">
+
+body {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #d3d3d3;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+}
+.card {
+   border-radius: 25px;
+}
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  /*font-size: 28px; */
+  padding: 0px 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>{{listHeader}}</h1>
+
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+  <div></div>
+  <a href="#!/view1">Desktop A</a> 
+  <a href="#!/view2">Desktop B</a>
+  <a href="#!/view3">Desktop C</a>
+</div>
+
+<div class="main">
+  <div ng-view></div>
+</div>
+
+
+<!-- <div class="flex-container">
+  <a href="#!/view1"><button type="button" class="btn btn-primary">Desktop A</button></a> 
+  &nbsp &nbsp &nbsp 
+  <a href="#!/view2"><button type="button" class="btn btn-primary">Desktop B</button></a>
+  &nbsp &nbsp &nbsp 
+  <a href="#!/view3"><button type="button" class="btn btn-primary">Desktop C</button></a>
+</div> -->
+
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="view3/view3.js"></script>
+
+
+  <script src="core/version/version.js"></script>
+
+
+  <script src="core/version/version-directive.js"></script>
+  <script src="core/version/interpolate-filter.js"></script>
+</body>
+</html>
