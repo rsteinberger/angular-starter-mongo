@@ -14,6 +14,14 @@ angular.module('myApp.view2', ['ngRoute'])
 	$scope.listHeader = "REGIONS";
 	$scope.list = [];
 
+	$("#com").removeClass("selected");
+	$("#nav").removeClass("selected");
+	$("#prx").removeClass("selected");
+
+	$("#a").removeClass("selected");
+	$("#b").addClass("selected");
+	$("#c").removeClass("selected");
+
 
 	$http.get("http://localhost:3000/regions")
 		.then(function(response) {

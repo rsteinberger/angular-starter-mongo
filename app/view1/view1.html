@@ -1,9 +1,14 @@
 
-
-
-<div class="flex-container">
-<h2 ng-click="selectRegions()">{{desktop}}</h2>
+<div class="view-nav-bar-container">
+	<div class="" ng-click="back()">
+		Back
+	</div>
+	<div class="" ng-click="reset()">
+		Reset
+	</div>
 </div>
+
+
 
 <div class="flex-container">
 <h1>{{listHeader}}</h1>
@@ -11,7 +16,8 @@
 
 <section ng-if="showRegions">
 <div class="flex-container">
-	<div ng-repeat="item in list" class="card" ng-click="selectRegion(item)">
+	<!-- <div ng-repeat="item in list" class="card" ng-click="selectRegion(item)"> -->
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectRegion(item)">
 		{{item.name}}
 	</div>
 </div>
@@ -19,15 +25,55 @@
 
 <section ng-if="showCountries">
 <div class="flex-container">
-	<div ng-repeat="item in list" class="card" ng-click="selectCountry(item)">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectCountry(item)">
 		{{item.name}}
 	</div>
 </div>
 </section>
 
-<section ng-if="showCountry">
+<section ng-if="showStates">
 <div class="flex-container">
-	<div ng-repeat="item in list" class="card" ng-click="selectCountry(item)">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectProvince(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showLocations">
+<div class="flex-container">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectLocation(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showSites">
+<div class="flex-container">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectSite(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showAreas">
+<div class="flex-container">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectArea(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showCells">
+<div class="flex-container">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectCell(item)">
+		{{item.name}}
+	</div>
+</div>
+</section>
+
+<section ng-if="showSensors">
+<div class="flex-container">
+	<div ng-repeat="item in list" ng-class="{'active_card': item.has_active == true, 'card': item.has_active == false}" ng-click="selectSensor(item)">
 		{{item.name}}
 	</div>
 </div>

@@ -35,20 +35,49 @@ body {
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  /*background-color: #f1f1f1;*/
   width: 200px;
   margin: 10px;
+  overflow: hidden;
   text-align: center;
-  line-height: 75px;
+  /*font-size: 18px;*/
+  line-height: 50px;
+  height: 50px;
 }
 .card {
-   border-radius: 25px;
+   border-radius: 15px;
+   cursor: pointer;
+    background-color: #f1f1f1;
+}
+.active_card {
+   border-radius: 15px;
+   cursor: pointer;
+   background-color: #009933;
+   color: #dcdcdc;
+}
+.view-nav-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #000000;
+  margin-right: 30px;
+}
+.view-nav-bar-container > div {
+  color: #dcdcdc;
+  line-height: 30px;
+  width: 100px;
+  cursor: pointer;
 }
 .sidenav {
   height: 100%;
   width: 160px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: #111;
@@ -73,6 +102,9 @@ body {
   /*font-size: 28px; */
   padding: 0px 10px;
 }
+.selected {
+  background-color: #d5d5d5;
+}
 
 </style>
 
@@ -82,14 +114,18 @@ body {
 <h1>{{listHeader}}</h1>
 
 <div class="sidenav">
-  <a href="#about">About</a>
+<!--   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#clients">Clients</a>
   <a href="#contact">Contact</a>
   <div></div>
-  <a href="#!/view1">Desktop A</a> 
-  <a href="#!/view2">Desktop B</a>
-  <a href="#!/view3">Desktop C</a>
+ -->
+  <div id="com"><br><a href="#!/com">COM</a></div>
+  <div id="nav"><a href="#!/nav">NAV</a></div>
+  <div id="prx"><a href="#!/prx">PRX</a></div>
+  <div id="a" ng-click=""><a href="#!/view1">Channel A</a></div>
+  <div id="b"><a href="#!/view2">Channel B</a></div>
+  <div id="c"><a href="#!/view3">Channel C</a></div>
 </div>
 
 <div class="main">
@@ -112,6 +148,11 @@ body {
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="view3/view3.js"></script>
+
+  <script src="com/com.js"></script>
+  <script src="nav/nav.js"></script>
+  <script src="prx/prx.js"></script>
+
 
 
   <script src="core/version/version.js"></script>
